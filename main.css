@@ -1,0 +1,114 @@
+
+body {
+    overflow: hidden;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    display:grid;
+    grid-template-columns: 2.3vw 95.4vw 2.3vw ;
+    grid-template-rows: 2.3vh 12vh auto 2.3vh ;
+    background-color: rgb(8, 30, 71);
+}
+
+.main-container {
+    overflow: hidden;
+    height: 100%;
+    box-sizing: content-box;
+    grid-area: 2/2/4/3;
+    border: solid;
+    /*border-radius: 2.3vh;*/
+    border-color: white;
+    border-width: 0.5rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,50%);
+    grid-template-areas: 
+    "intro"
+    "intro"
+    "about"
+    "about";
+}
+
+.navbar {
+    grid-area: 2/2/3/3;
+    background: linear-gradient(#ffffff00, transparent);
+    place-self: stretch;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "name nav";
+    justify-content: space-evenly;
+}
+
+.navbar ul {
+    margin: 0 20px 0 0;
+    grid-area: nav;
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 20px;
+    padding: 1vh 0;
+}
+
+.nav {
+    box-sizing: border-box;
+    display: inline-block;
+    
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 12;
+    border: solid;
+    border-color: black;
+}
+
+#rocket {
+    grid-area: 1/1/5/2 ;
+    justify-self: right;
+    margin-right: 20%;
+}
+
+div.head-text {
+    grid-area: intro;
+    align-self: center;
+    justify-self: left;
+    margin: 5%;
+    color: azure;
+    position: relative;
+    z-index: 99;
+    background-color: rgba(255, 228, 196, 0.199);
+    padding: 0.9rem ;
+}
+
+div#hi.head-text {
+    font-size: 2rem;
+    margin-bottom: 0px ;
+
+}
+
+h1#intro {
+    font-size: 3rem;
+    margin: 5px 0px ;
+
+}
+
+p.head-text {
+    color: rgb(238, 83, 83);
+    margin: 0px 0px 4px 0px;
+}
+
+div.para-text {
+    font-size: small;
+    margin: 2px 0px;
+    color: rgb(238, 83, 83);
+
+    /*color: rgb(206, 36, 240);*/
+}
+
+@media (min-height: 800px) {
+    div.head-text {
+        align-self: start;
+        margin-top: 34%;
+    }
+
+}
