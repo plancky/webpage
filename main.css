@@ -72,10 +72,8 @@ body {
 
 div#icons img {
     box-sizing: border-box;
-
     padding: 5px 10px;
     text-align: center;
-
     height: 2.6rem;
 }
 
@@ -143,7 +141,9 @@ div#intro p {
 }
 div#about {
     grid-area: about;
-    align-content: center;
+    align-self: start;
+    max-width: 70vw;
+    margin-top: 7rem;
 }
 div#bgp2 {
     grid-area: about;
@@ -151,11 +151,6 @@ div#bgp2 {
     place-self:stretch;
     position: relative;
     z-index: -5;
-}
-div#about {
-    place-self: start;
-    margin-top: 7rem;
-    margin-right: 10rem;
 }
 /*
 .rocket {
